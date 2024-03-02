@@ -24,6 +24,7 @@ import com.highcapable.yukihookapi.hook.factory.configs
 import com.highcapable.yukihookapi.hook.log.YLog
 import com.highcapable.yukihookapi.hook.xposed.proxy.IYukiHookXposedInit
 
+import io.mesalabs.knoxpatch.hooks.AuthFwHooks
 import io.mesalabs.knoxpatch.hooks.KnoxSDKHooks
 import io.mesalabs.knoxpatch.hooks.PropSpoofHooks
 import io.mesalabs.knoxpatch.hooks.RootDetectionHooks
@@ -77,6 +78,7 @@ object MainHook : IYukiHookXposedInit {
 
         loadSystem(SystemHooks)
 
+        loadApp(Constants.AUTHFW_PACKAGE_NAME, AuthFwHooks)
         loadApp(Constants.AUTO_BLOCKER_PACKAGE_NAME, PropSpoofHooks)
         loadApp(Constants.SAMSUNG_CLOUD_PLATFORM_MANAGER_PACKAGE_NAME, PropSpoofHooks)
         loadApp(Constants.SECURE_FOLDER_PACKAGE_NAME, PropSpoofHooks)
