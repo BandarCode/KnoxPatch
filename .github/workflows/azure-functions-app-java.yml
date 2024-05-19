@@ -14,15 +14,11 @@
 #   - Publish Profile: https://github.com/Azure/functions-action#using-publish-profile-as-deployment-credential-recommended
 #   - Azure Service Principal for RBAC: https://github.com/Azure/functions-action#using-azure-service-principal-for-rbac-as-deployment-credential
 #
-# For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples/tree/master/FunctionApp
-              
+# For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples/tree/master/FunctionApp            
 - name: Azure Login
-
-
-              
   uses: Azure/login@v2.1.0
   
-- name: Deploy Java project to Azure Function App
+  name: Deploy Java project to Azure Function App
 
 on:
   push:
